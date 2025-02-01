@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadati Dublin Core -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+    <META name="DC.Title" content="Dragon Ball Universe - Catalogo Digitale"/>
+    <META name="DC.Creator" content="Davide Boschi"/>
+    <META name="DC.Subject" content="Dragon Ball, Manga, Anime, Videogiochi, Personaggi"/>
+    <META name="DC.Description" content="Un catalogo digitale dedicato all'universo di Dragon Ball, con schede dettagliate su manga, anime, videogiochi e personaggi."/>
+    <META name="DC.Publisher" content="Github Pages"/>
+    <META name="DC.Date" content="2024/01/01"/>
+    <META name="DC.Type" content="Catalogo web interattivo"/>
+    <META name="DC.Format" content="Sito web"/>
+    <META name="DC.Source" content="Dragon Ball - Manga e Anime originali di Akira Toriyama"/>
+    <META name="DC.Language" content="It"/>
+
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="../../style/style.css"/>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <title>Dragon Ball Universe</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <img src="../../images/altre/logoheader.png" class="img-fluid" alt="Dragon Ball Universe Logo">
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a href="../index.html"> <img src="../../images/altre/logo.png" width="20%" class="img-fluid ms-3" alt="Immagine Progetto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="manga.html">Manga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="anime.html">Anime</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="videogiochiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Videogiochi</a>
+                        <ul class="dropdown-menu" aria-labelledby="videogiochiDropdown">
+                            <li><a class="dropdown-item" href="#">Console</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile</a></li>
+                            <li><a class="dropdown-item Novita" href="ultime_uscite.html">Novita !</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="personaggi.html">Personaggi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accesso.html">Accedi</a></li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="d-flex ms-5" role="search">
+                    <input class="form-control me-3" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="py-2">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Manga</li>
+            </ol>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="row">
+            <!-- Filtri Laterali -->
+            <aside class="col-md-3 mb-4">
+                <div class="accordion" id="accordionFiltri">
+
+                    <!-- Filtro per Serie -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#filtraSerie" aria-expanded="true">
+                                Ordina per Serie
+                            </button>
+                        </h2>
+                        <div id="filtraSerie" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="classico" id="checkDragonBallClassico">
+                                        <label class="form-check-label" for="checkDragonBallClassico">Dragon Ball</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="z" id="checkDragonBallZ">
+                                        <label class="form-check-label" for="checkDragonBallZ">Dragon Ball Z</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="super" id="checkDragonBallSuper">
+                                        <label class="form-check-label" for="checkDragonBallSuper">Dragon Ball Super</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="gt" id="checkDragonBallGT">
+                                        <label class="form-check-label" for="checkDragonBallGT">Dragon Ball GT</label>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary mt-3">Applica Filtri</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Filtro per Edizione -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtraEdizione" aria-expanded="false">
+                                Per Edizione
+                            </button>
+                        </h2>
+                        <div id="filtraEdizione" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Seleziona l'edizione del volume:</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="ultimate" id="checkUltimate">
+                                        <label class="form-check-label" for="checkUltimate">Ultimate Edition</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="evergreen" id="checkEvergreen">
+                                        <label class="form-check-label" for="checkEvergreen">Evergreen Edition</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="extra" id="checkExtra">
+                                        <label class="form-check-label" for="checkExtra">Extra Edition</label>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary mt-3">Applica Filtri</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filtro per Numero -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtraNumero" aria-expanded="false">
+                                Per Numero
+                            </button>
+                        </h2>
+                        <div id="filtraNumero" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Filtra in base al numero</p>
+                                <label for="NumeriDa">Da: </label>
+                                <input type="number" id="NumeriDa" name="numeri" min="1" max="100" class="form-control mb-3">
+                                <label for="NumeriA">A: </label>
+                                <input type="number" id="NumeriA" name="numeri" min="1" max="100" class="form-control mb-3">
+                                <button class="btn btn-primary">Applica</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filtro per Uscita -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtraUscita" aria-expanded="false">
+                                Per Uscita
+                            </button>
+                        </h2>
+                        <div id="filtraUscita" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Filtra in base all'anno</p>
+                                <label for="AnnoDal">Dal: </label>
+                                <input type="number" id="AnnoDal" name="anno" min="1984" max="2025" class="form-control mb-3">
+                                <label for="AnnoAl">Al: </label>
+                                <input type="number" id="AnnoAl" name="anno" min="1984" max="2025" class="form-control mb-3">
+                                <button class="btn btn-primary">Applica</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filtro per Disegnatore -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtraDisegnatore" aria-expanded="false">
+                                Per Disegnatore
+                            </button>
+                        </h2>
+                        <div id="filtraDisegnatore" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="toriyama" id="checkToriyama">
+                                        <label class="form-check-label" for="checkToriyama">Akira Toriyama</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="toyotaro" id="checkToyotaro">
+                                        <label class="form-check-label" for="checkToyotaro">Toyotaro</label>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary mt-3">Applica Filtri</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filtro per Antagonisti -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtraAntagonisti" aria-expanded="false">
+                                Per Antagonista
+                            </button>
+                        </h2>
+                        <div id="filtraAntagonisti" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="frieza" id="checkFrieza">
+                                        <label class="form-check-label" for="checkFrieza">Freezer</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="cell" id="checkCell">
+                                        <label class="form-check-label" for="checkCell">Cell</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input class="form-check-input me-1" type="checkbox" value="buu" id="checkBuu">
+                                        <label class="form-check-label" for="checkBuu">Majin Bu</label>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary mt-3">Applica Filtri</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Filtro per ISBN -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filtraISBN" aria-expanded="false">
+                                Per ISBN
+                            </button>
+                        </h2>
+                        <div id="filtraISBN" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Inserisci l'ISBN:</p>
+                                <input type="text" id="isbnInput" class="form-control mb-3" placeholder="Es. 978-1974752812">
+                                <button class="btn btn-primary">Cerca</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+
+            <!-- Catalogo -->
+            <section class="col-md-9">
+                <h2 class="text-center mb-5">Volumi Disponibili</h2>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Card 1 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../../images/fumetti/23super.jpg" class="card-img-top" alt="Dragon Ball Volume 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dragon Ball Super Volume 23</h5>
+
+                                <a href="item-1.html" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../../images/fumetti/dragonballz1.jpg" class="card-img-top" alt="Dragon Ball Z Volume 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dragon Ball Z Volume 1</h5>
+
+                                <a href="#" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../../images/fumetti/super1.jpg" class="card-img-top" alt="Dragon Ball Super Volume 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dragon Ball Super Volume 1</h5>
+                                <a href="#" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../../images/fumetti/gt1.jpg" class="card-img-top" alt="Dragon Ball GT Volume 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Dragon Ball GT Volume 1</h5>
+                                <a href="#" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../../images/fumetti/dragonball5.jpg" class="card-img-top" alt="Dragon Ball Volume 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Dragon Ball Volume 5</h5>
+                                <a href="#" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../../images/fumetti/super6.jpeg" class="card-img-top" alt="Dragon Ball Volume 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Dragon Ball Super Volume 6</h5>
+                                <a href="#" class="btn btn-primary">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paginazione -->
+                <nav aria-label="Page navigation" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link">Precedente</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Successivo</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+   <!-- Footer -->
+   <footer>
+    <section class="container-fluid text-light py-3 bg-dark">
+        <div class="row">
+            <!-- Disclaimer -->
+            <div class="col-md-6 mb-3">
+                <p class="mb-2">
+                    Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici,
+                    sotto la tutela delle leggi internazionali sul copyright/trademark.
+                </p>
+                <p class="mb-0">
+                    Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+                </p>
+            </div>
+            <!-- Social Media -->
+            <div class="col-md-3 mb-3 text-center">
+                <h5 class="mb-3">Seguici</h5>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+            </div>
+            <!-- Link utili -->
+            <div class="col-md-3 mb-3 text-center">
+                <h5 class="mb-3">Link Utili</h5>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item mx-2">
+                        <a class="text-light" href="#">Credits</a>
+                    </li>
+                    <li class="list-inline-item mx-2">
+                        <a class="text-light" href="webprojectplan.html" >Web Project Plan</a>
+                    </li>
+                    <li class="list-inline-item mx-2">
+                        <a class="text-light" href="#">Informazioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

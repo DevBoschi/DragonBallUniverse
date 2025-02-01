@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadati Dublin Core -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+    <META name="DC.Title" content="Dragon Ball Universe - Catalogo Digitale"/>
+    <META name="DC.Creator" content="Davide Boschi"/>
+    <META name="DC.Subject" content="Dragon Ball, Manga, Anime, Videogiochi, Personaggi"/>
+    <META name="DC.Description" content="Un catalogo digitale dedicato all'universo di Dragon Ball, con schede dettagliate su manga, anime, videogiochi e personaggi."/>
+    <META name="DC.Publisher" content="Github Pages"/>
+    <META name="DC.Date" content="2024/01/01"/>
+    <META name="DC.Type" content="Catalogo web interattivo"/>
+    <META name="DC.Format" content="Sito web"/>
+    <META name="DC.Source" content="Dragon Ball - Manga e Anime originali di Akira Toriyama"/>
+    <META name="DC.Language" content="It"/>
+    
+
+
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="../style/style.css"/>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Dragon Ball Universe</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <img src="../images/altre/logoheader.png" class="img-fluid" alt="Dragon Ball Universe Logo">
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a href="index.html"> <img src="../images/altre/logo.png" width="20%" class="img-fluid ms-3" alt="Immagine Progetto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/manga.html">Manga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/anime.html">Anime</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="videogiochiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Videogiochi</a>
+                        <ul class="dropdown-menu" aria-labelledby="videogiochiDropdown">
+                            <li><a class="dropdown-item" href="#">Console</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile</a></li>
+                            <li><a class="dropdown-item Novita" href="pages/ultime_uscite.html">Novita !</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="pages/personaggi.html">Personaggi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/accesso.html">Accedi</a></li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="d-flex ms-5" role="search">
+                    <input class="form-control me-3" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<!-- Main Content -->
+<main class="container py-5">
+    <!-- Introduzione -->
+    <section class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="../images/personaggi/gokuindex.png" width="60%" class="img-fluid rounded shadow" alt="Immagine Progetto">
+        </div>
+        <div class="col-md-6">
+            <h2>Il Progetto</h2>
+            <p>
+                Questo sito è stato creato per offrire una panoramica completa del mondo di Dragon Ball, esplorando i manga, gli anime, i videogiochi e i personaggi principali. L'obiettivo è fornire un'esperienza unica e interattiva, che combini dettagli informativi con una navigazione fluida.
+            </p>
+            <h2>Cos'è Dragon Ball?</h2>
+            <p>
+                Dragon Ball è una delle saghe più celebri nella storia dell'intrattenimento, creata dal genio di 
+                <a href="#" data-bs-toggle="modal" class="ao" data-bs-target="#akiraToriyamaModal"><strong>Akira Toriyama</strong></a>. 
+                La serie segue le avventure di Son Goku, un giovane guerriero Saiyan, mentre affronta sfide epiche e cerca le leggendarie Sfere del Drago.
+            </p>
+         <!-- Bottone per Mappa Interattiva -->
+        <section class="text-center mb-5">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mappaModal">Scopri le date più importanti della saga</button>
+        </section>
+        </div>
+    </section>
+
+    <!-- Contenuti in evidenza -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Contenuti in Evidenza</h2>
+        <div id="carouselContenuti" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Nuovo Capitolo Dragon Ball Super -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="../images/fumetti/23super.jpg" width="40%" class="img-fluid rounded shadow mx-auto d-block" alt="Dragon Ball Super Nuovo Capitolo">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="px-4">
+                                <h5>Nuovo Volume di Dragon Ball Super</h5>
+                                <p>Leggi il nuovo capitolo di Dragon Ball Super, con incredibili sviluppi e una battaglia epica!</p>
+                                <a href="pages/item-1.html" class="btn btn-primary">Leggi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuova Puntata Dragon Ball Daima -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="../images/fumetti/ep15.jpg" width="60%" class="img-fluid rounded shadow mx-auto d-block" alt="Dragon Ball Daima Nuova Puntata">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="px-4">
+                                <h5>Nuova Puntata di Dragon Ball Daima</h5>
+                                <p>Un episodio ricco di azione e misteri, con Goku e i suoi amici in versione miniatura!</p>
+                                <a href="pages/anime.html" class="btn btn-primary">Guarda</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personaggio Iconico: Goku SSJ4 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="../images/personaggi/gokussj4.png" width="40%" class="img-fluid rounded shadow mx-auto d-block" alt="Goku SSJ4">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="px-4">
+                                <h5>Personaggio Iconico: Goku SSJ4</h5>
+                                <p>Scopri tutto su Goku Super Saiyan 4, una delle trasformazioni più amate di Dragon Ball!</p>
+                                <a href="pages/personaggi.html" class="btn btn-primary">Approfondisci</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controlli del Carosello -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselContenuti" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Precedente</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselContenuti" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Successivo</span>
+            </button>
+        </div>
+    </section>
+</main>
+
+
+    <!-- Modale Akira Toriyama -->
+    <div class="modal fade" id="akiraToriyamaModal" tabindex="-1" aria-labelledby="akiraToriyamaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="akiraToriyamaModalLabel">Akira Toriyama</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../images/altre/akira.jpg" class="img-fluid rounded shadow text-center" alt="Foto Akira Toryama">
+                    <p>
+                        <strong>Akira Toriyama</strong> (5 aprile 1955 - 1 marzo 2024) è stato uno dei più grandi fumettisti giapponesi della storia, noto per aver creato <em>Dragon Ball</em>, una delle serie manga e anime più iconiche di tutti i tempi. 
+
+                        La sua carriera iniziò con <em>Dr. Slump</em>, che gli valse un grande successo in Giappone, e si estese anche al design di videogiochi celebri come <em>Dragon Quest</em>. Con un mix unico di umorismo, azione e narrazione epica, Toriyama ha influenzato profondamente il mondo dell'intrattenimento.
+                        
+                        Nonostante la sua scomparsa, la sua eredità vive attraverso le opere che ha creato, continuando a ispirare generazioni di fan e artisti in tutto il mondo.
+                        
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale Mappa Interattiva -->
+<div class="modal fade" id="mappaModal" tabindex="-1" aria-labelledby="mappaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mappaModalLabel">Le Date Più Importanti della Saga</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1h-Oc49K-hpywEsNBFOFD7iIcOF4Al6PeaNrgdsgtiyo&font=Default&lang=it&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <section class="container-fluid text-light py-3 bg-dark">
+            <div class="row">
+                <!-- Disclaimer -->
+                <div class="col-md-6 mb-3">
+                    <p class="mb-2">
+                        Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici,
+                        sotto la tutela delle leggi internazionali sul copyright/trademark.
+                    </p>
+                    <p class="mb-0">
+                        Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+                    </p>
+                </div>
+                <!-- Social Media -->
+                <div class="col-md-3 mb-3 text-center">
+                    <h5 class="mb-3">Seguici</h5>
+                    <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
+                <!-- Link utili -->
+                <div class="col-md-3 mb-3 text-center">
+                    <h5 class="mb-3">Link Utili</h5>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-2">
+                            <a class="text-light" href="#">Credits</a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a class="text-light" href="pages/webprojectplan.html">Web Project Plan</a>
+                        </li>
+                        <li class="list-inline-item mx-2">
+                            <a class="text-light" href="#">Informazioni</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadati Dublin Core -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+    <META name="DC.Title" content="Dragon Ball Universe - Catalogo Digitale"/>
+    <META name="DC.Creator" content="Davide Boschi"/>
+    <META name="DC.Subject" content="Dragon Ball, Manga, Anime, Videogiochi, Personaggi"/>
+    <META name="DC.Description" content="Un catalogo digitale dedicato all'universo di Dragon Ball, con schede dettagliate su manga, anime, videogiochi e personaggi."/>
+    <META name="DC.Publisher" content="Github Pages"/>
+    <META name="DC.Date" content="2024/01/01"/>
+    <META name="DC.Type" content="Catalogo web interattivo"/>
+    <META name="DC.Format" content="Sito web"/>
+    <META name="DC.Source" content="Dragon Ball - Manga e Anime originali di Akira Toriyama"/>
+    <META name="DC.Language" content="It"/>
+
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="../../style/style.css"/>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../site.webmanifest">
+
+    <title>Dragon Ball Universe</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <img src="../../images/altre/logoheader.png" class="img-fluid" alt="Dragon Ball Universe Logo">
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a href="../index.html"> <img src="../../images/altre/logo.png" width="20%" class="img-fluid ms-3" alt="Immagine Progetto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="manga.html">Manga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="anime.html">Anime</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="videogiochiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Videogiochi</a>
+                        <ul class="dropdown-menu" aria-labelledby="videogiochiDropdown">
+                            <li><a class="dropdown-item" href="#">Console</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile</a></li>
+                            <li><a class="dropdown-item Novita" href="ultime_uscite.html">Novita !</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="personaggi.html">Personaggi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accesso.html">Accedi</a></li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="d-flex ms-5" role="search">
+                    <input class="form-control me-3" type="search" placeholder="Cerca" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Cerca</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="py-2">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="manga.html">Manga</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dragon Ball Super Volume 23</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="row">
+
+            <div class="row align-items-stretch">
+                <!-- Carousel -->
+                <div class="col-md-8 d-flex align-items-stretch">
+                    <div id="carouselVolume23" class="carousel slide border border-5 w-100" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../../images/fumetti/23super.jpg" class="d-block mx-auto w-50 h-50" style="object-fit: contain;" alt="Copertina Volume 23">
+                            </div>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVolume23" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Metadati -->
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="w-100 p-3 bg-white border rounded shadow-sm">
+                        <h2>Dettagli Volume</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Titolo:</strong> Dragon Ball Super Volume 23</li>
+                            <li class="list-group-item"><strong>Autore:</strong> Akira Toriyama</li>
+                            <li class="list-group-item"><strong>Disegnatore:</strong> Toyotaro</li>
+                            <li class="list-group-item"><strong>Pubblicazione:</strong> 29 ottobre 2024</li>
+                            <li class="list-group-item"><strong>Editore:</strong> Star Comics</li>
+                            <li class="list-group-item"><strong>Formato:</strong> Tankōbon (b/n)</li>
+                            <li class="list-group-item"><strong>Pagine:</strong> 192</li>
+                            <li class="list-group-item"><strong>Collezione:</strong> Dragon Ball Super</li>
+                            <li class="list-group-item"><strong>ISBN:</strong> 978-1974752812</li>
+                            <li class="list-group-item"><strong>Lingua:</strong> Italiano</li>
+                            <li class="list-group-item"><strong>Antagonista:</strong> <a class="ao" href="personaggi.html">Cell</a></li>
+                            <li class="list-group-item"><strong>Pubblico consigliato:</strong> Dai 14 anni in su</li>
+                        </ul>
+                        <div class="mt-3">
+                            <strong>Aggiungi ai preferiti</strong>
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sinossi -->
+            <section class="mt-5">
+                <h2>Sinossi</h2>
+                <p>
+                    Il cyborg più forte mai costruito, <a class="ao" href="personaggi.html">Cell Max</a>, si attiva! <a class="ao" href="personaggi.html">Goku</a> 
+                    e compagni lo affrontano insieme a <a class="ao" href="personaggi.html">Gamma 1 e 2</a>, 
+                    ma vengono schiacciati dai suoi attacchi. In extremis, <a class="ao" href="personaggi.html">Piccolo</a> si trasforma... 
+                    Scoppierà un’ultrabattaglia tra giganti?!
+                </p>
+            </section>
+            
+
+        <!-- Suggerimenti -->
+        <section class="mt-5">
+            <h2>Ti potrebbe interessare</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../../images/fumetti/22super.jpg" class="card-img-top" alt="Volume 22">
+                        <div class="card-body">
+                            <h5 class="card-title">Dragon Ball Super Volume 22</h5>
+                            <a href="item-1.html#" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../../images/fumetti/21super.jpg" class="card-img-top" alt="Volume 21">
+                        <div class="card-body">
+                            <h5 class="card-title">Dragon Ball Super Volume 21</h5>
+                            <a href="item-1.html#" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../../images/fumetti/20super.jpg" class="card-img-top" alt="Volume 20">
+                        <div class="card-body">
+                            <h5 class="card-title">Dragon Ball Super Volume 20</h5>
+                            <a href="item-1.html#" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+ <!-- Footer -->
+ <footer>
+    <section class="container-fluid text-light py-3 bg-dark">
+        <div class="row">
+            <!-- Disclaimer -->
+            <div class="col-md-6 mb-3">
+                <p class="mb-2">
+                    Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici,
+                    sotto la tutela delle leggi internazionali sul copyright/trademark.
+                </p>
+                <p class="mb-0">
+                    Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+                </p>
+            </div>
+            <!-- Social Media -->
+            <div class="col-md-3 mb-3 text-center">
+                <h5 class="mb-3">Seguici</h5>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-twitter fs-4"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+            </div>
+            <!-- Link utili -->
+            <div class="col-md-3 mb-3 text-center">
+                <h5 class="mb-3">Link Utili</h5>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item mx-2">
+                        <a class="text-light" href="#">Credits</a>
+                    </li>
+                    <li class="list-inline-item mx-2">
+                        <a class="text-light" href="webprojectplan.html" >Web Project Plan</a>
+                    </li>
+                    <li class="list-inline-item mx-2">
+                        <a class="text-light" href="#">Informazioni</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</footer>
+
+    <!-- Modale Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Richiesto Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Per aggiungere ai preferiti, accedi al tuo account.
+                </div>
+                <div class="modal-footer">
+                    <a href="accesso.html" class="btn btn-primary">Accedi</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,354 @@
+/* ========================
+ Stili generali
+======================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ========================
+   Header
+======================== */
+header {
+    background-image: url("../images/altre/sfondo.webp");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+}
+
+header .display-5 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header .lead {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* ========================
+   Navbar
+======================== */
+.navbar {
+    background-color: #282c34;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff9900 !important;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #f4f4f4 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active {
+    color: #ff6600 !important;
+    text-decoration: underline;
+}
+
+.nav-link:hover {
+    color: #ff6600 !important;
+    text-decoration: underline;
+}
+
+.dropdown-item.Novita {
+    color: #ff6600 !important;
+}
+
+/* ========================
+   Breadcrumbs
+======================== */
+.breadcrumb {
+    background-color: transparent;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+    color: #ff6600;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+    color: #a04203;
+}
+
+/* ========================
+   Section
+======================== */
+section {
+    padding: 2rem 0;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #1c1c1c;
+}
+
+p.lead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ========================
+   Carousel
+======================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: gray;
+    background-size: 50%;
+    border-radius: 50%;
+}
+
+.carousel-img {
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* ========================
+   Cards
+======================== */
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.card-img-top {
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card-header{
+    background-color: #333 !important;
+    color: #ffffff !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+/* ========================
+   Button
+======================== */
+.btn-primary {
+    background-color: #ff6600;
+    border: none;
+    padding: 0.8rem 1.0rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #cc5200;
+    transform: scale(1.05);
+}
+
+.ao {
+    color: #cc5200;
+}
+
+/* ========================
+   Pagination
+======================== */
+.pagination .page-link {
+    color: #ff6600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .page-link:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: #fff;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+  
+    color: #fff;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom:0;
+
+}
+
+footer p.grandezza-font {
+    font-size: 0.85rem; 
+    line-height: 1.4; 
+    margin-bottom: 0.5rem; 
+}
+
+footer a {
+    color: #ff9900;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+footer a:hover {
+    color: #ffcc00; 
+    text-decoration: underline;
+}
+
+footer .list-inline-item {
+    margin: 0 5px;
+}
+
+footer .list-inline-item a {
+    padding: 3px 8px; 
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+footer .list-inline-item a:hover {
+    background-color: #ff6600;
+    color: #fff; 
+}
+
+
+/* ========================
+   Accordion
+======================== */
+.accordion-button {
+    background-color: #1c1c1c !important;
+    color: white !important;
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:hover {
+    background-color: #cc5200 !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-body {
+    background-color: #fff3e6;
+    color: #333;
+}
+
+/* ========================
+   Modal
+======================== */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-check-input:checked {
+    background-color: #ff6600;
+    border-color: #cc5200;
+}
+
+/* ========================
+ Altro
+======================== */
+.text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+
+/* Navbar Styles */
+.navbar .form-control {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px; 
+}
+
+.navbar .btn-primary {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.navbar .nav-link {
+    display: flex;
+    align-items: center; 
+    padding: 0 10px; 
+    height: 100%;
+}
+
